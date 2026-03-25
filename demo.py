@@ -51,6 +51,60 @@ today = date.today()
 age = today.year - dob.year - ((today.month, today.day) < (dob.month, dob.day))
 print(f"Your age is: {age}")
 
+# Calculate the number of days remaining until a specific event
+event_date = datetime(2026, 5, 4).date()
+today = datetime.now()
+remaining = event_date - today.date()
+print("remaining days are: ", remaining.days)
+
+
+# OS module
+import os
+
+# List all files and directories in the current directory
+print("Files in the current directory:")
+print(os.listdir())
+
+# Create a new directory called "demo_folder"
+os.mkdir("demo_folder")
+print("demo_folder created.")
+
+# Rename the "demo_folder.py" file to "demo_module_renamed.py"
+os.rename("demo_folder.py", "demo_folderr.py")
+print("demo_folder.py renamed to demo_folderr.py.")
+
+# Remove the "demo_folder" directory
+os.rmdir("demo_folderr")
+print("demo_folderr removed.")
+
+#Check file exists or not
+file_exists = os.path.isfile("demo_module_renamed.py")
+print(f"Does demo_module_renamed.py exist? {file_exists}")
+
+# Get the size of the "demo_module_renamed.py" file
+os.path.getsize("demo_module_renamed.py")
+print(f"Size of demo_module_renamed.py: {os.path.getsize('demo_module_renamed.py')} bytes")
+
+# Create 10 directories folder_1, folder_2, ..., folder_10
+for i in range(1, 11):
+    os.mkdir(f"folder_{i}")
+print("10 folders created: folder_1, folder_2, ..., folder_10")
+
+# Delete the created folders
+for i in range(1, 11):
+    os.rmdir(f"folder_{i}")
+print("10 folders deleted: folder_1, folder_2, ..., folder_10")
+
+
+
+
+
+
+
+
+
+
+
 
 
 

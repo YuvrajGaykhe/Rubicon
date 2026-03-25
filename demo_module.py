@@ -4,4 +4,3 @@ def greet(name):
     
 def add(a, b):
     return a + b
-    
